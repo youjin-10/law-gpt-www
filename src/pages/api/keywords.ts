@@ -7,7 +7,7 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
-const handler = async (req, res) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   console.log("req.body", req.body);
   const model = "text-davinci-003";
   const { inquiry } = req.body;

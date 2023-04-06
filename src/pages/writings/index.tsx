@@ -90,7 +90,11 @@ function Example() {
         <div>
           추출한 키워드:
           {Object.keys(result).map((keyword) => {
-            return <span className="p-2 ">{keyword}</span>;
+            return (
+              <span className="p-2" key={keyword}>
+                {keyword}
+              </span>
+            );
           })}
         </div>
         <div>
