@@ -21,13 +21,14 @@ export default function Home() {
           당신을 위한 빠른 무료법률상담 서비스
         </h2>
         <div>조금만 나중에 만나요!</div>
+        <div className=" h-96"></div>
         {/* next Image */}
-        <Image
+        {/* <Image
           src="https://unsplash.com/ko/%EC%82%AC%EC%A7%84/MYbhN8KaaEc"
           alt="Picture of the author"
           width={500}
           height={500}
-        />
+        /> */}
       </section>
     </>
   );
