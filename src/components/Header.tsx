@@ -9,7 +9,7 @@ export default function Header() {
           <Image
             alt="header logo"
             src="/ourlogo2.png"
-            className="w-16 md:w-32"
+            className=" w-20 md:w-32"
             width={64}
             height={64}
           />
@@ -18,10 +18,10 @@ export default function Header() {
       <nav>
         <ul className="flex space-x-3 text-sm md:text-base">
           <li className="text-gray-500 hover:text-gray-900">
-            <Link href="/">변호사 리스트</Link>
+            <Link href="/#lawyers">변호사</Link>
           </li>
           <li className="text-gray-500 hover:text-gray-900">
-            <Link href="/">의견서 작성하기</Link>
+            <Link href="/writings">의견서 작성하기</Link>
           </li>
         </ul>
       </nav>
