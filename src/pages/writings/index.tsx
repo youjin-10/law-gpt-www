@@ -4,7 +4,11 @@ import { useState } from "react";
 export default function Writings() {
   return (
     <div>
-      <h1>Writings</h1>
+      <div>의견서 작성 페이지 안내사항</div>
+      <ul>
+        <li>생성 AI 기반의...정확하지 않을 수 있습니다.</li>
+        <li>질의를 정확히 입력해 주세요</li>
+      </ul>
       <Example />
     </div>
   );
@@ -53,19 +57,19 @@ function Example() {
   };
 
   return (
-    <section>
+    <section className="mt-32">
       <div>
         <label
-          htmlFor="price"
+          htmlFor="inquiry"
           className="block text-sm font-medium leading-6 text-gray-900"
         >
-          의견서 페이지 - 사용자 Inquiry 입력칸
+          질의를 입력해 주세요.
         </label>
-        <div className="relative rounded-md shadow-sm my-5">
+        <div className="relative rounded-md shadow-sm my-1">
           <input
             type="text"
-            name="price"
-            id="price"
+            name="inquiry"
+            id="inquiry"
             className="block w-full rounded-md border-0 py-1.5 pl-3 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
             placeholder="사용자 inquiry"
             value={inquiry}
