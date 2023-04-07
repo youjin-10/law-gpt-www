@@ -20,6 +20,7 @@ export default function Header() {
           <li className="text-gray-500 hover:text-gray-900">
             <Link href="/#lawyers">변호사</Link>
           </li>
+
           <li className="text-gray-500 hover:text-gray-900">
             <Link href="/writings">의견서 작성하기</Link>
           </li>

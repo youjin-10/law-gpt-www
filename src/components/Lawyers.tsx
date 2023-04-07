@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Tab } from "@headlessui/react";
 import Image from "next/image";
 
-function classNames(...classes) {
+function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(" ");
 }
 
@@ -81,7 +81,7 @@ export default function Lawyers() {
 function LaywerDetail({ lawyers }: { lawyers: any }) {
   return (
     <div>
-      {lawyers.map((post) => (
+      {lawyers.map((post: any) => (
         <li key={post.id} className="relative rounded-md p-1 ">
           <h3 className=" font-medium leading-5">{post.title}</h3>
 
@@ -95,14 +95,14 @@ function LaywerDetail({ lawyers }: { lawyers: any }) {
 
           <h4>[학력]</h4>
           <ul className="my-1 font-normal  text-gray-500">
-            {post.studies.map((study, i) => (
+            {post.studies.map((study: any, i: number) => (
               <li key={i}>{study}</li>
             ))}
           </ul>
 
           <h4>[경력]</h4>
           <ul className="my-1 font-normal  text-gray-500">
-            {post.experiences.map((experience, i) => (
+            {post.experiences.map((experience: any, i: number) => (
               <li key={i}>{experience}</li>
             ))}
           </ul>
