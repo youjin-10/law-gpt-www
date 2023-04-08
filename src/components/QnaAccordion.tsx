@@ -18,7 +18,7 @@ const qna = [
 
 export default function QnaAccordion() {
   return (
-    <div className="w-full px-4 pt-16">
+    <div className="w-full px-4 pt-16 mt-52">
       <h3 className="text-xl md:text-3xl font-bold">FAQ</h3>
       <div className="mx-auto w-full max-w-md rounded-2xl bg-white p-2">
         {qna.map((data) => {
