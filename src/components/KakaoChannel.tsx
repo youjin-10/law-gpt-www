@@ -1,9 +1,3 @@
-declare global {
-  interface Window {
-    Kakao: any;
-  }
-}
-
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
