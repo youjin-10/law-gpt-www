@@ -13,6 +13,7 @@ export default function Lawyers() {
         id: 1,
         title: "민사 일반 담당",
         photo: "/lawyer1.jpeg",
+        name: "송명진 변호사",
         studies: [
           "고려대학교 법학전문대학원",
           "고려대학교 경제학과",
@@ -28,7 +29,19 @@ export default function Lawyers() {
         ],
       },
     ],
-    건설: [],
+    건설: [
+      {
+        id: 2,
+        title: "건설 담당",
+        photo: "/lawyer2.png",
+        name: "추다은 변호사",
+        studies: ["연세대학교 법학과", "창덕여자 고등학교 "],
+        experiences: [
+          "전) (주) 태영건설 법무팀(2019-2023)",
+          "전) 법무법인 해송",
+        ],
+      },
+    ],
     이혼: [],
   });
 
@@ -83,7 +96,7 @@ function LaywerDetail({ lawyers }: { lawyers: any }) {
     <div>
       {lawyers.map((post: any) => (
         <li key={post.id} className="relative rounded-md p-1 ">
-          <h3 className=" font-medium leading-5">{post.title}</h3>
+          <h3 className="sm:text-lg font-medium leading-5">{post.title}</h3>
 
           <Image
             src={post.photo}
@@ -92,6 +105,7 @@ function LaywerDetail({ lawyers }: { lawyers: any }) {
             height={40}
             className="w-20 m-3 mx-auto"
           />
+          <div className="font-semibold mb-3">{post.name}</div>
 
           <h4>[학력]</h4>
           <ul className="my-1 font-normal  text-gray-500">
