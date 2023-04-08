@@ -6,6 +6,7 @@ import { useState } from "react";
 import summarizeCase from "@/utils/summarizeCase";
 import Lawyers from "@/components/Lawyers";
 import QnaAccordion from "@/components/QnaAccordion";
+import { KakaoChannel } from "@/components/KakaoChannel";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -14,6 +15,7 @@ export default function Home() {
     <>
       <Head>
         <title>로지피티 Law-GPT | 당신을 위한 빠른 무료법률상담</title>
+        <link rel="icon" href="/favicon_lawgpt.ico" />
       </Head>
 
       <section className="flex flex-1 max-w-[800px] mx-auto flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20">
@@ -38,6 +40,8 @@ export default function Home() {
             className="absolute top-28 sm:top-32 md:top-40 left-10 sm:left-20 md:left-14 w-36 sm:w-52 md:w-80 transition-all duration-700 ease-out transform hover:scale-110"
           />
         </div>
+
+        <KakaoChannel />
 
         <div className="text-xl md:text-3xl mt-28 mb-48">
           <div>
