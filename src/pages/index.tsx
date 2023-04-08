@@ -24,7 +24,7 @@ export default function Home() {
 
         <MainIntro />
 
-        {/* <KakaoChannel /> */}
+        <KakaoChannel />
 
         <Lawyers />
         <QnaAccordion />
