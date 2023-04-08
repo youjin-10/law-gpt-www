@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import summarizeCase from "@/utils/summarizeCase";
 import Lawyers from "@/components/Lawyers";
 import QnaAccordion from "@/components/QnaAccordion";
@@ -97,24 +97,58 @@ const MainTitle = () => {
 };
 
 const MainIntro = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
   const variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          } else {
+            setIsVisible(false);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1,
+      }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [ref]);
+
   return (
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      variants={variants}
-      transition={{ duration: 1 }}
-      className="text-xl md:text-3xl mt-28 mb-48"
-    >
-      <div>
-        법률서비스 이용자들에게 <strong>생성형AI</strong>를 이용한
-      </div>
-      <div>무료법률상담 솔루션을 제공하고</div>
-      <div>이를 바탕으로 전문 변호사의 정보를 제공합니다.</div>
-    </motion.div>
+    <div ref={ref}>
+      <motion.div
+        initial="hidden"
+        animate={isVisible ? "visible" : "hidden"}
+        variants={variants}
+        transition={{ duration: 1 }}
+        className="text-xl md:text-3xl mt-28 mb-48"
+      >
+        <div>
+          법률서비스 이용자들에게 <strong>생성형AI</strong>를 이용한
+        </div>
+        <div>무료법률상담 솔루션을 제공하고</div>
+        <div>이를 바탕으로 전문 변호사의 정보를 제공합니다.</div>
+      </motion.div>
+    </div>
   );
 };
