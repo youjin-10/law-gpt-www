@@ -108,15 +108,15 @@ function LaywerDetail({ lawyers }: { lawyers: any }) {
           <div className="font-semibold mb-3">{post.name}</div>
 
           <div className="inline-flex mb-5">
-            <button className="border border-r-0 border-gray-500  text-gray-800 hover:bg-purple-200  text-sm py-1.5 px-3 rounded-l">
+            <button className="border border-r-0 border-gray-400  text-gray-800 hover:bg-purple-200  text-sm py-1.5 px-3 rounded-l">
               전화상담
             </button>
 
-            <button className="border border-r-0 border-gray-500 border-collapse text-gray-800 hover:bg-purple-200  text-sm py-1.5 px-3 ">
+            <button className="border border-r-0 border-gray-400 border-collapse text-gray-800 hover:bg-purple-200  text-sm py-1.5 px-3 ">
               문자상담
             </button>
 
-            <button className="border border-gray-500 border-collapse text-gray-800 hover:bg-purple-200  text-sm py-1.5 px-3 rounded-r">
+            <button className="border border-gray-400 border-collapse text-gray-800 hover:bg-purple-200  text-sm py-1.5 px-3 rounded-r">
               대면상담
             </button>
           </div>
