@@ -21,9 +21,9 @@ export default function Header() {
             <Link href="/#lawyers">변호사</Link>
           </li>
 
-          <li className="text-gray-500 hover:text-gray-900">
+          {/* <li className="text-gray-500 hover:text-gray-900">
             <Link href="/writings">의견서 작성하기</Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
       {/* <a href="" target="_blank" rel="noreferrer"></a> */}
