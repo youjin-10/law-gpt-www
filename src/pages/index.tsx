@@ -41,7 +41,7 @@ export default function Home() {
           />
         </div>
 
-        <KakaoChannel />
+        {/* <KakaoChannel /> */}
 
         <div className="text-xl md:text-3xl mt-28 mb-48">
           <div>
