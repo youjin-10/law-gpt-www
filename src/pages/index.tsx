@@ -22,9 +22,9 @@ export default function Home() {
         <MainTitle />
         <MainChatImages />
 
-        {/* <KakaoChannel /> */}
-
         <MainIntro />
+
+        <KakaoChannel />
 
         <Lawyers />
         <QnaAccordion />
@@ -87,7 +87,7 @@ const MainTitle = () => {
       animate="visible"
       variants={variants}
       transition={{ duration: 1 }}
-      className="text-3xl sm:text-4xl md:text-6xl font-bold mb-10"
+      className="text-3xl sm:text-4xl md:text-6xl font-bold my-12"
     >
       <span>당신을 위한 </span>
       <br />
@@ -140,8 +140,8 @@ const MainIntro = () => {
         initial="hidden"
         animate={isVisible ? "visible" : "hidden"}
         variants={variants}
-        transition={{ duration: 1 }}
-        className="text-xl md:text-3xl mt-28 mb-48"
+        transition={{ duration: 1, once: true }}
+        className="text-xl md:text-3xl mt-28 mb-36"
       >
         <div>
           법률서비스 이용자들에게 <strong>생성형AI</strong>를 이용한
