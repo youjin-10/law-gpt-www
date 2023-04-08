@@ -73,7 +73,7 @@ export default function Lawyers() {
               key={idx}
               className={classNames(
                 "rounded-xl bg-purple-100/30 p-3",
-                "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"
+                "ring-white ring-opacity-60 ring-offset-2  focus:outline-none focus:ring-2"
               )}
             >
               <ul>
@@ -103,9 +103,34 @@ function LaywerDetail({ lawyers }: { lawyers: any }) {
             alt="lawyer1"
             width={40}
             height={40}
-            className="w-20 m-3 mx-auto"
+            className="w-20 m-3 mx-auto rounded-full ring-2 ring-white"
           />
           <div className="font-semibold mb-3">{post.name}</div>
+
+          <div className="inline-flex mb-5">
+            <button className="border border-r-0 border-gray-500  text-gray-800 hover:bg-purple-200  text-sm py-1.5 px-3 rounded-l">
+              전화상담
+            </button>
+
+            <button className="border border-r-0 border-gray-500 border-collapse text-gray-800 hover:bg-purple-200  text-sm py-1.5 px-3 ">
+              문자상담
+            </button>
+
+            <button className="border border-gray-500 border-collapse text-gray-800 hover:bg-purple-200  text-sm py-1.5 px-3 rounded-r">
+              대면상담
+            </button>
+          </div>
+
+          {/* <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-1 px-2 rounded inline-flex items-center">
+            <svg
+              className="fill-current w-4 h-4 mr-2"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+            </svg>
+            <span>Download</span>
+          </button> */}
 
           <h4>[학력]</h4>
           <ul className="my-1 font-normal  text-gray-500">
