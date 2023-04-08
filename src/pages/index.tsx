@@ -5,6 +5,7 @@ import styles from "@/styles/Home.module.css";
 import { useState } from "react";
 import summarizeCase from "@/utils/summarizeCase";
 import Lawyers from "@/components/Lawyers";
+import QnaAccordion from "@/components/QnaAccordion";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -47,6 +48,7 @@ export default function Home() {
         </div>
 
         <Lawyers />
+        <QnaAccordion />
 
         <div className="h-56"></div>
       </section>
