@@ -54,7 +54,7 @@ const MainChatImages = () => {
           alt="user asking question"
           width={320}
           height={320}
-          className="absolute top-10 right-10 sm:right-20 md:right-14 w-36 sm:w-52 md:w-80 transition-all duration-700 ease-out transform hover:scale-110"
+          className="absolute top-7 sm:top-10 right-3 sm:right-20 md:right-14 w-48 sm:w-52 md:w-80 transition-all duration-700 ease-out transform hover:scale-110"
         />
       </motion.div>
       <motion.div
@@ -68,7 +68,7 @@ const MainChatImages = () => {
           alt="law-gpt answering question"
           width={320}
           height={320}
-          className="absolute top-28 sm:top-32 md:top-40 left-10 sm:left-20 md:left-14 w-36 sm:w-52 md:w-80 transition-all duration-700 ease-out transform hover:scale-110"
+          className="absolute top-28 sm:top-32 md:top-40 left-3 sm:left-20 md:left-14 w-44 sm:w-52 md:w-80 transition-all duration-700 ease-out transform hover:scale-110"
         />
       </motion.div>
     </div>
