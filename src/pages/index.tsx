@@ -144,7 +144,8 @@ const MainIntro = () => {
         className="text-xl md:text-3xl mt-28 mb-36"
       >
         <div>
-          법률서비스 이용자들에게 <strong>생성형AI</strong>를 이용한
+          법률서비스 이용자들에게
+          <br /> <strong>생성형AI</strong>를 이용한
         </div>
         <div>무료법률상담 솔루션을 제공하고</div>
         <div>이를 바탕으로 전문 변호사의 정보를 제공합니다.</div>
