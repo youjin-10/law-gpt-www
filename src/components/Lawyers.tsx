@@ -48,13 +48,13 @@ export default function Lawyers() {
   return (
     <div id="lawyers" className="w-full max-w-md px-2 py-16 sm:px-0">
       <Tab.Group>
-        <Tab.List className="flex space-x-1 rounded-xl bg-purple-800/30  p-1">
+        <Tab.List className="flex space-x-1 rounded-xl bg-purple-800/30 p-1">
           {Object.keys(categories).map((category) => (
             <Tab
               key={category}
               className={({ selected }) =>
                 classNames(
-                  "w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-purple-700",
+                  "w-full rounded-lg py-2 sm:py-2.5 text-sm font-medium leading-5 text-purple-700",
                   "ring-white ring-opacity-60 ring-offset-2 ring-offset-purple-400 focus:outline-none focus:ring-2",
                   selected
                     ? "bg-white shadow"
@@ -107,16 +107,16 @@ function LaywerDetail({ lawyers }: { lawyers: any }) {
           />
           <div className="font-semibold mb-3">{post.name}</div>
 
-          <div className="inline-flex mb-5">
-            <button className="border border-r-0 border-gray-400  text-gray-800 hover:bg-purple-200  text-sm py-1.5 px-3 rounded-l">
+          <div className="inline-flex mb-5 text-xs sm:text-sm">
+            <button className="border border-r-0 border-gray-400  text-gray-800 hover:bg-purple-200  py-1.5 px-3 rounded-l">
               전화상담
             </button>
 
-            <button className="border border-r-0 border-gray-400 border-collapse text-gray-800 hover:bg-purple-200  text-sm py-1.5 px-3 ">
+            <button className="border border-r-0 border-gray-400 border-collapse text-gray-800 hover:bg-purple-200   py-1.5 px-3 ">
               문자상담
             </button>
 
-            <button className="border border-gray-400 border-collapse text-gray-800 hover:bg-purple-200  text-sm py-1.5 px-3 rounded-r">
+            <button className="border border-gray-400 border-collapse text-gray-800 hover:bg-purple-200   py-1.5 px-3 rounded-r">
               대면상담
             </button>
           </div>
@@ -132,15 +132,15 @@ function LaywerDetail({ lawyers }: { lawyers: any }) {
             <span>Download</span>
           </button> */}
 
-          <h4>[학력]</h4>
-          <ul className="my-1 font-normal  text-gray-500">
+          <h4 className="text-sm sm:text-base">[학력]</h4>
+          <ul className="text-sm sm:text-base my-1 font-normal  text-gray-500">
             {post.studies.map((study: any, i: number) => (
               <li key={i}>{study}</li>
             ))}
           </ul>
 
-          <h4>[경력]</h4>
-          <ul className="my-1 font-normal  text-gray-500">
+          <h4 className="text-sm sm:text-base">[경력]</h4>
+          <ul className="text-sm sm:text-base my-1 font-normal  text-gray-500">
             {post.experiences.map((experience: any, i: number) => (
               <li key={i}>{experience}</li>
             ))}
