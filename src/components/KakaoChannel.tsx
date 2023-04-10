@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-const KAKAO_JS_SDK_KEY = process.env.NEXT_PUBLIC_KAKAO_JS_SDK_KEY;
-
 export function KakaoChannel() {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
@@ -11,33 +9,6 @@ export function KakaoChannel() {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
   };
-  useEffect(() => {
-    const kakao = window.Kakao;
-    if (!kakao.isInitialized()) {
-      kakao.init(KAKAO_JS_SDK_KEY);
-      // kakao.Channel.createAddChannelButton({
-      //   container: "#add-channel-button",
-      //   channelPublicId: "_xeuyUxj", // 카카오톡 채널 홈 URL에 명시된 id로 설정합니다.
-      // });
-    }
-
-    // const script = document.createElement("script");
-    // script.async = true;
-    // try {
-    //   if (window.Kakao) {
-    //     const kakao = window.Kakao;
-    //     if (!kakao.isInitialized()) {
-    //       kakao.init("c1b46de0d7f0d78bfbedbec4f46e25d4");
-    //     }
-    //     kakao.Channel.createAddChannelButton({
-    //       container: "#add-channel-button",
-    //       channelPublicId: "_xeuyUxj", // 카카오톡 채널 홈 URL에 명시된 id로 설정합니다.
-    //     });
-    //   }
-    //   document.body.appendChild(script);
-    //   document.body.removeChild(script);
-    // } catch (error) {}
-  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
