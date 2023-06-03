@@ -48,21 +48,17 @@ export function KakaoChannel() {
         transition={{ duration: 1, once: true }}
         className="h-60 mt-16 mb-36"
       >
-        <div className="text-lg md:text-2xl font-medium mb-6">
-          카카오톡 채널 추가해서 로지피티 사용해보기
-        </div>
+        <p className="hidden sm:block text-xl sm:text-3xl font-medium mb-6">
+          카카오톡에서{" "}
+          <strong className="text-[#7e22ce] animate-blink">law-GPT</strong>를
+          검색해 보세요!
+        </p>
 
-        <button
-          className="animate-blink mx-auto w-40 sm:w-60 h-10 sm:h-12 rounded-full bg-purple-800 text-white text-xs sm:text-lg font-medium flex items-center justify-center shadow-lg hover:cursor-pointer hover:bg-purple-900 transition duration-500 ease-in-out"
-          id="add-channel-button"
-          onClick={() => {
-            window.Kakao.Channel.addChannel({
-              channelPublicId: "_xeuyUxj",
-            });
-          }}
-        >
-          로지피티 카카오톡 채널
-        </button>
+        <p className="block sm:hidden text-xl sm:text-3xl font-medium mb-6">
+          카카오톡에서 <strong className="text-[#7e22ce]">law-GPT</strong>를
+          <br />
+          검색해 보세요!
+        </p>
       </motion.div>
     </div>
   );
