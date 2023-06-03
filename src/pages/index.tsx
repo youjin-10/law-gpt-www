@@ -87,11 +87,10 @@ const MainTitle = () => {
       animate="visible"
       variants={variants}
       transition={{ duration: 1 }}
-      className="text-3xl sm:text-4xl md:text-6xl font-bold my-12"
+      className="text-2xl sm:text-4xl md:text-6xl font-bold my-12"
     >
-      <span>당신을 위한 </span>
-      <br />
-      <span>빠른 무료법률상담 서비스</span>
+      <p className="sm:pb-4">당신을 위한 </p>
+      <p>빠른 무료법률상담 서비스</p>
     </motion.h2>
   );
 };
@@ -141,7 +140,7 @@ const MainIntro = () => {
         animate={isVisible ? "visible" : "hidden"}
         variants={variants}
         transition={{ duration: 1, once: true }}
-        className="text-xl md:text-3xl mt-28 mb-36"
+        className="text-lg sm:text-3xl mt-28 mb-36"
       >
         <div>
           법률서비스 이용자들에게
