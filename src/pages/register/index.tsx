@@ -17,7 +17,7 @@ const Index = () => {
             htmlFor="id"
             className="block text-sm font-medium leading-6 text-gray-900"
           >
-            아이디
+            아이디 (필수)
           </label>
           <input
             type="text"
@@ -32,7 +32,7 @@ const Index = () => {
             htmlFor="password"
             className="block text-sm font-medium leading-6 text-gray-900"
           >
-            비밀번호
+            비밀번호 (필수)
           </label>
           <input
             type="password"
@@ -47,7 +47,7 @@ const Index = () => {
             htmlFor="phone"
             className="block text-sm font-medium leading-6 text-gray-900"
           >
-            핸드폰 번호
+            핸드폰 번호 (필수)
           </label>
           <input
             type="text"
@@ -62,7 +62,7 @@ const Index = () => {
             htmlFor="email"
             className="block text-sm font-medium leading-6 text-gray-900"
           >
-            이메일
+            이메일 (필수)
           </label>
           <input
             type="text"
