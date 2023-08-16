@@ -16,9 +16,13 @@ export default function Header() {
         </Link>
       </h1>
       <nav>
-        <ul className="flex space-x-3 text-sm md:text-base">
+        <ul className="flex space-x-8 text-sm md:text-base">
           <li className="text-gray-500 hover:text-gray-900">
             <Link href="/#lawyers">변호사</Link>
+          </li>
+
+          <li className="text-gray-500 hover:text-gray-900">
+            <Link href="/register">회원가입</Link>
           </li>
 
           {/* <li className="text-gray-500 hover:text-gray-900">

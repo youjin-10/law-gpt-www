@@ -42,7 +42,7 @@ const Index = () => {
             className="w-full border border-gray-300 rounded-md bg-transparent p-1.5 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
           />
         </div>
-        <div className="my-10">
+        {/* <div className="my-10">
           <label
             htmlFor="phone"
             className="block text-sm font-medium leading-6 text-gray-900"
@@ -71,6 +71,61 @@ const Index = () => {
             autoComplete="email"
             className="w-full border border-gray-300 rounded-md bg-transparent p-1.5 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
           />
+        </div> */}
+        <div className="my-10">
+          <label
+            htmlFor="birthYYYYMMDD"
+            className="block text-sm font-medium leading-6 text-gray-900"
+          >
+            생년월일 (필수) *1999.12.31 형식으로 기입
+          </label>
+          <input
+            type="text"
+            name="birthYYYYMMDD"
+            id="birthYYYYMMDD"
+            autoComplete="birthYYYYMMDD"
+            className="w-full border border-gray-300 rounded-md bg-transparent p-1.5 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+          />
+        </div>
+        <div className="my-10">
+          {/* <label
+            htmlFor="gender"
+            className="block text-sm font-medium leading-6 text-gray-900"
+          >
+            성별
+          </label>
+          <input
+            type="checkbox"
+            name="gender"
+            id="gender"
+            autoComplete="gender"
+            className="w-full border border-gray-300 rounded-md bg-transparent p-1.5 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+          /> */}
+          <fieldset>
+            <legend className="block text-sm font-medium leading-6 text-gray-900">
+              성별 (선택 사항)
+            </legend>
+
+            <div>
+              <input type="radio" id="male" name="gender" />
+              <label
+                htmlFor="male"
+                className="ml-2 text-sm font-medium leading-6 text-gray-900"
+              >
+                남성
+              </label>
+            </div>
+
+            <div>
+              <input type="radio" id="female" name="gender" />
+              <label
+                htmlFor="female"
+                className="ml-2 text-sm font-medium leading-6 text-gray-900"
+              >
+                여성
+              </label>
+            </div>
+          </fieldset>
         </div>
         <button
           onClick={handleRegister}
