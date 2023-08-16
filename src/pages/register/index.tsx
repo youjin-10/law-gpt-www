@@ -72,6 +72,22 @@ const Index = () => {
             className="w-full border border-gray-300 rounded-md bg-transparent p-1.5 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
           />
         </div> */}
+
+        <div className="my-10">
+          <label
+            htmlFor="name"
+            className="block text-sm font-medium leading-6 text-gray-900"
+          >
+            이름 (필수)
+          </label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            autoComplete="name"
+            className="w-full border border-gray-300 rounded-md bg-transparent p-1.5 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+          />
+        </div>
         <div className="my-10">
           <label
             htmlFor="birthYYYYMMDD"
